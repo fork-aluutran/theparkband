@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		403474012D6147B700861856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 403474002D6147B700861856 /* GoogleService-Info.plist */; };
+		403474032D62405000861856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 403474022D62405000861856 /* GoogleService-Info.plist */; };
 		B618C3CC2D5B2B340096A68B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CA2D5B2B340096A68B /* User.swift */; };
 		B618C3D12D5B2B3F0096A68B /* UserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CE2D5B2B3F0096A68B /* UserTabView.swift */; };
 		B618C3D22D5B2B3F0096A68B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CF2D5B2B3F0096A68B /* UserView.swift */; };
@@ -18,7 +18,6 @@
 		B629C5E72D5C7A9D0073F325 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B629C5DF2D5C7A9D0073F325 /* LocationManager.swift */; };
 		B629C5E92D5C80D90073F325 /* UsersLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B629C5E82D5C80D90073F325 /* UsersLocationView.swift */; };
 		B64006DE2D5B46AF0092A703 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = B64006DD2D5B46AF0092A703 /* LoremSwiftum */; };
-		B6657B302D55667000485054 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6657B2F2D55667000485054 /* GoogleService-Info.plist */; };
 		B68BC2592D5B2385005ED198 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC2582D5B2385005ED198 /* ItineraryView.swift */; };
 		B68BC25B2D5B23A2005ED198 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC25A2D5B23A2005ED198 /* ScheduleView.swift */; };
 		B68BC2612D5B23EE005ED198 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC2602D5B23EE005ED198 /* MessageView.swift */; };
@@ -42,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		403474002D6147B700861856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		403474022D62405000861856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B618C3CA2D5B2B340096A68B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B618C3CE2D5B2B3F0096A68B /* UserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabView.swift; sourceTree = "<group>"; };
 		B618C3CF2D5B2B3F0096A68B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		B629C5E12D5C7A9D0073F325 /* AddressLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLookupView.swift; sourceTree = "<group>"; };
 		B629C5E22D5C7A9D0073F325 /* AddressLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLookupViewModel.swift; sourceTree = "<group>"; };
 		B629C5E82D5C80D90073F325 /* UsersLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersLocationView.swift; sourceTree = "<group>"; };
-		B6657B2F2D55667000485054 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B68BC2582D5B2385005ED198 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 		B68BC25A2D5B23A2005ED198 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		B68BC2602D5B23EE005ED198 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -142,9 +140,8 @@
 		B6E352002D53548C00773756 /* TheParkBand */ = {
 			isa = PBXGroup;
 			children = (
+				403474022D62405000861856 /* GoogleService-Info.plist */,
 				B6E351FE2D53548C00773756 /* TheParkBand.entitlements */,
-				403474002D6147B700861856 /* GoogleService-Info.plist */,
-				B6657B2F2D55667000485054 /* GoogleService-Info.plist */,
 				B6DE2F3E2D5CA04200090A78 /* SearchComponent.swift */,
 				B6C28BAF2D5B45F100241CDB /* HorizonalTabView.swift */,
 				B6C28BB32D5B464A00241CDB /* Itinerary.swift */,
@@ -292,9 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E352032D53548C00773756 /* Preview Assets.xcassets in Resources */,
-				403474012D6147B700861856 /* GoogleService-Info.plist in Resources */,
 				B6E352042D53548C00773756 /* Assets.xcassets in Resources */,
-				B6657B302D55667000485054 /* GoogleService-Info.plist in Resources */,
+				403474032D62405000861856 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,13 +454,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheParkBand/Preview Content\"";
-				DEVELOPMENT_TEAM = QZV9HX7NJ9;
+				DEVELOPMENT_TEAM = JTW3HFSSJ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheParkBand/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Park Band";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DISPLAY_NAME) requires access to your devices location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = " requires access to your devices location.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -480,7 +476,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mastinmedia.TheParkBand;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aluutran.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -501,13 +497,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheParkBand/Preview Content\"";
-				DEVELOPMENT_TEAM = QZV9HX7NJ9;
+				DEVELOPMENT_TEAM = JTW3HFSSJ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheParkBand/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Park Band";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DISPLAY_NAME) requires access to your devices location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = " requires access to your devices location.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -523,7 +519,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mastinmedia.TheParkBand;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aluutran.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
