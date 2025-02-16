@@ -42,6 +42,8 @@ final class AuthenticationViewModel: ObservableObject {
           return
       }
       
+      print("\(SRC): firebaseApp.options = \(toStr())")
+      
       guard let clientID = firebaseApp.options.clientID else {
           print("\(SRC): ERROR: Missing clientID.")
           return
@@ -70,7 +72,11 @@ final class AuthenticationViewModel: ObservableObject {
     GIDSignIn.sharedInstance.signOut()
     try Auth.auth().signOut()
   }
-}
+    
+    private func toStr() -> String {
+        return "<>"
+    }
+} // AuthenticationViewModel()
 
 
 // MARK: RESTORE GOOGLE AUTHENTICATION

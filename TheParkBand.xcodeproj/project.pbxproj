@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		403474032D62405000861856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 403474022D62405000861856 /* GoogleService-Info.plist */; };
+		403474052D627C5600861856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 403474042D627C5600861856 /* GoogleService-Info.plist */; };
 		B618C3CC2D5B2B340096A68B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CA2D5B2B340096A68B /* User.swift */; };
 		B618C3D12D5B2B3F0096A68B /* UserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CE2D5B2B3F0096A68B /* UserTabView.swift */; };
 		B618C3D22D5B2B3F0096A68B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618C3CF2D5B2B3F0096A68B /* UserView.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		403474022D62405000861856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		403474042D627C5600861856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B618C3CA2D5B2B340096A68B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B618C3CE2D5B2B3F0096A68B /* UserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabView.swift; sourceTree = "<group>"; };
 		B618C3CF2D5B2B3F0096A68B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		B6E352002D53548C00773756 /* TheParkBand */ = {
 			isa = PBXGroup;
 			children = (
-				403474022D62405000861856 /* GoogleService-Info.plist */,
+				403474042D627C5600861856 /* GoogleService-Info.plist */,
 				B6E351FE2D53548C00773756 /* TheParkBand.entitlements */,
 				B6DE2F3E2D5CA04200090A78 /* SearchComponent.swift */,
 				B6C28BAF2D5B45F100241CDB /* HorizonalTabView.swift */,
@@ -290,7 +290,7 @@
 			files = (
 				B6E352032D53548C00773756 /* Preview Assets.xcassets in Resources */,
 				B6E352042D53548C00773756 /* Assets.xcassets in Resources */,
-				403474032D62405000861856 /* GoogleService-Info.plist in Resources */,
+				403474052D627C5600861856 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
