@@ -11,6 +11,8 @@ import GoogleSignIn
 
 @MainActor
 final class AuthenticationViewModel: ObservableObject {
+    let SRC = "AuthenticationViewModel"
+    
   @Published var state: AuthenticationState = .signedOut
   @Published var user: User?
   
@@ -31,26 +33,37 @@ final class AuthenticationViewModel: ObservableObject {
   
   // MARK: SIGN INTO FIREBASE
   func signIn(scopes: [String]) async throws {
-    print("GOOGLE SIGN-IN START")
-    // CREATE CONFIGURATION OBJECT
-    guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-    print("CLIENT ID: \(clientID)")
-    let config = GIDConfiguration(clientID: clientID)
-    print("CONFIG: \(config)")
-    GIDSignIn.sharedInstance.configuration = config
-    
-    // START SIGN IN FLOW
-    guard let rootViewController =  UIApplication.shared.rootViewController() else { throw GIDSignInError(.unknown) }
-    let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController, hint: nil, additionalScopes: scopes)
-    print("GOOGLE SIGN IN RESULT: \(result)")
-    
-    // CREDENTIAL CREATED
-    guard let idToken = result.user.idToken else { throw GIDSignInError(.unknown) }
-    let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: result.user.accessToken.tokenString)
-    
-    // SIGN INTO FIREBASE WITH CREDIATIAL
-    try await Auth.auth().signIn(with: credential)
-  }
+      let SRC = self.SRC + ".signIn"
+      print("\(SRC): Called")
+      
+      // CREATE CONFIGURATION OBJECT
+      guard let firebaseApp = FirebaseApp.app() else {
+          print("\(SRC): ERROR: FirebaseApp is nil.")
+          return
+      }
+      
+      guard let clientID = firebaseApp.options.clientID else {
+          print("\(SRC): ERROR: Missing clientID.")
+          return
+      }
+      
+      print("\(SRC): CLIENT ID: \(clientID)")
+      let config = GIDConfiguration(clientID: clientID)
+      print("\(SRC): CONFIG: \(config)")
+      GIDSignIn.sharedInstance.configuration = config
+      
+      // START SIGN IN FLOW
+      guard let rootViewController =  UIApplication.shared.rootViewController() else { throw GIDSignInError(.unknown) }
+      let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController, hint: nil, additionalScopes: scopes)
+      print("\(SRC): GOOGLE SIGN IN RESULT: \(result)")
+      
+      // CREDENTIAL CREATED
+      guard let idToken = result.user.idToken else { throw GIDSignInError(.unknown) }
+      let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: result.user.accessToken.tokenString)
+      
+      // SIGN INTO FIREBASE WITH CREDIATIAL
+      try await Auth.auth().signIn(with: credential)
+  } // signIn()
   
   // MARK: SIGN OUT OF FIREBASE & GOOGLE
   func signOut() throws {
