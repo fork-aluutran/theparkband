@@ -42,13 +42,16 @@ final class AuthenticationViewModel: ObservableObject {
           return
       }
       
+      /*
       print("\(SRC): firebaseApp.options = \(toStr())")
       
       guard let clientID = firebaseApp.options.clientID else {
           print("\(SRC): ERROR: Missing clientID.")
           return
       }
+      */
       
+      let clientID = "911972533915-ej0h8motto4mak56gn6vrpi4fd5vo1g8.apps.googleusercontent.com"
       print("\(SRC): CLIENT ID: \(clientID)")
       let config = GIDConfiguration(clientID: clientID)
       print("\(SRC): CONFIG: \(config)")
