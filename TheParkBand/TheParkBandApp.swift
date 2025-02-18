@@ -9,9 +9,13 @@ import FirebaseCore
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    let SRC = "AppDelegate"
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
+      let SRC = self.SRC + ".application"
+      print("\(SRC): Calling FirebaseApp.configure()")
+      FirebaseApp.configure()
+      print("\(SRC): Done")
+      return true
   }
 }
 
