@@ -9,10 +9,14 @@ import SwiftUI
 import LoremSwiftum
 
 struct UserTabView: View {
+    let SRC = "UserTabView"
+    
   @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
   let user: User
   
   var body: some View {
+      let _ = print("\(SRC): Called")
+      
     TabView {
       ItineraryView()
         .tabItem { Label("Bulliten", systemImage: "list.clipboard").opacity(0.6) }

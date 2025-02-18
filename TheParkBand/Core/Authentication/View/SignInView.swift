@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct SignInView: View {
+    let SRC = "SignInView"
+    
   @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
   var body: some View {
+      let _ = print("\(SRC): Called")
+      
     VStack {
       Image("AppLogo")
         .resizable()

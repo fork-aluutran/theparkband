@@ -17,10 +17,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct TheParkBandApp: App {
+    let SRC = "TheParkBandApp"
+    
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   @StateObject var authenticationViewModel = AuthenticationViewModel()
   
   var body: some Scene {
+      let _ = print("\(SRC): Called")
+      
     WindowGroup {
       AuthenticationView()
         .environmentObject(authenticationViewModel)

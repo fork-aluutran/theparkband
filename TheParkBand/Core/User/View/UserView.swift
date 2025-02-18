@@ -9,10 +9,14 @@ import SwiftUI
 import FirebaseAuth
 
 struct UserView: View {
+    let SRC = "UserView"
+    
   @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
 //    @StateObject var userViewModel = UserViewModel()
   
   var body: some View {
+    let _ = print("\(SRC): Called")
+      
     ZStack {
       if let user = authenticationViewModel.user {
         UserTabView(user: user)

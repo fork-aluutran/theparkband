@@ -9,9 +9,13 @@ import SwiftUI
 
 
 struct AuthenticationView: View {
+    let SRC = "AuthenticationView"
+    
   @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
   
   var body: some View {
+      let _ = print("\(SRC): Called")
+      
     switch authenticationViewModel.state {
       case .signedIn:
         UserView().environmentObject(authenticationViewModel)

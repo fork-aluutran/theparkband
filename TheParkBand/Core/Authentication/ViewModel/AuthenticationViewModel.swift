@@ -60,14 +60,21 @@ final class AuthenticationViewModel: ObservableObject {
       // START SIGN IN FLOW
       guard let rootViewController =  UIApplication.shared.rootViewController() else { throw GIDSignInError(.unknown) }
       let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController, hint: nil, additionalScopes: scopes)
-      print("\(SRC): GOOGLE SIGN IN RESULT: \(result)")
+      print("\(SRC): GOOGLE SIGN IN RESULT: \(toStr(result))")
       
       // CREDENTIAL CREATED
       guard let idToken = result.user.idToken else { throw GIDSignInError(.unknown) }
       let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: result.user.accessToken.tokenString)
       
       // SIGN INTO FIREBASE WITH CREDIATIAL
-      try await Auth.auth().signIn(with: credential)
+      print("\(SRC): Awaiting signIn(): credential = \(credential)")
+      Auth.auth().signIn(with: credential) {result, error in
+          let SRC = self.SRC + ".signIn"
+          print("\(SRC): result = \(String(describing: result))|error = \(String(describing: error)))")
+          // At this point, our user is signed in
+      }
+      
+      print("\(SRC): Done")
   } // signIn()
   
   // MARK: SIGN OUT OF FIREBASE & GOOGLE
@@ -76,8 +83,11 @@ final class AuthenticationViewModel: ObservableObject {
     try Auth.auth().signOut()
   }
     
-    private func toStr() -> String {
-        return "<>"
+    private func toStr(_ result: GIDSignInResult) -> String {
+        let user = result.user
+        let idToken = user.idToken!.tokenString
+        let accessToken = user.accessToken.tokenString
+        return "<User: idToken = \(idToken)|accessToken = \(accessToken)|>"
     }
 } // AuthenticationViewModel()
 

@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ItineraryView: View {
+  let SRC = "ItineraryView"
+    
   @State var isPresenting: Bool = false
   
   var body: some View {
+      let _ = print("\(SRC): Called")
+      
     NavigationStack {
       VStack {
         Text("Itinerary")
